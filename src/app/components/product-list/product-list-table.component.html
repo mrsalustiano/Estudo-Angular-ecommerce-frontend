@@ -1,19 +1,19 @@
 <table class="table table-striped table-hover">
     <thead class="thead-dark">
       <tr>
-        <th></th> 
-        <th scope="col">SKU</th>
-        <th scope="col">Name</th>
-        <th scope="col">Description</th>
-        <th scope="col">Unit Price</th>
-        <th scope="col">Active</th>
-        <th scope="col">Units In Stock</th>
+        <th scope="col" class="align-middle">Image</th> 
+        <th scope="col" class="align-middle">SKU</th>
+        <th scope="col" class="align-middle">Name</th>
+        <th scope="col" class="align-middle">Description</th>
+        <th scope="col" class="align-middle">Unit Price</th>
+        <th scope="col" class="align-middle">Active</th>
+        <th scope="col" class="align-middle">Units In Stock</th>
       </tr>
     </thead>
     <tbody>
         <tr *ngFor="let item of products">
             <td class="align-middle">
-                <img src="{{item.imageUrl }}" height="50" />
+                <img src="{{item.imageUrl }}" width="50%" height="50%" />
             </td>
             
             <td class="align-middle">{{ item.sku}}</td>
