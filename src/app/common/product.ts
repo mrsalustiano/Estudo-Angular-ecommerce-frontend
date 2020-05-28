@@ -1,9 +1,10 @@
 export class Product {
+    id: string;
     sku: String;
     name: String;
     description: String;
     unitPrice: number;
-    imageURL: String;
+    imageUrl: String;
     active: boolean;
     unitsInStock: number;
     dateCreated: Date;

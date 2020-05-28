@@ -7,19 +7,26 @@
         <div *ngFor="let item of products" class="col-md-3">
           <div class="product-box">
 
-            <img src="{{ item.imageUrl }}" class="img-responsive">
-            <h1>{{ item.name }}</h1>
+            <a routerLink="/products/{{item.id}}">
+              <img src="{{ item.imageUrl }}" class="img-responsive">
+            </a>
+
+            
+            <a routerLink="/products/{{item.id}}">
+              <h1>{{ item.name }}</h1>
+            </a>
+            
             <div class="price">{{ item.unitPrice | currency: 'BRL' }}</div>
             <a href="#" class="primary-btn">Add to Cart</a>
           </div>
 
-   
+
         </div>
 
-       <!-- if  products empty the display a message-->
-       <div *ngIf="products?.length == 0" class="alert alert-danger col-md-12" role="alert">
-        No products found in the search!
-      </div>
+        <!-- if  products empty the display a message-->
+        <div *ngIf="products?.length == 0" class="alert alert-danger col-md-12" role="alert">
+          No products found in the search!
+        </div>
 
       </div>
     </div>
